@@ -119,7 +119,7 @@
             cursor: pointer;
         }
 
-        #korPlusz {
+        #kovetkezoKor {
             cursor: pointer;
         }
 
@@ -192,19 +192,20 @@
 </head>
 
 <body>
+    <!--
     <div id="kor">
         <button id="kovetkezoKor" class="btn btn-dark btn-lg">Kör:</button> <span id="aktualisKor">0</span>
     </div>
+-->
 
 
-    <!--
     <div id="kor">
         <div class="rendezoBal" id="korMinusz">-</div>
         <label for="kor">Kör:</label>
-        <span id="korErtek">1</span>
+        <span id="korErtek">0</span>
         <div class="rendezoJobb" id="kovetkezoKor">+</div>
     </div>
--->
+
     <div id="EP">
         <div class="rendezoBal" id="epMinusz">-</div>
         <span id="epErtek">20</span>
@@ -302,7 +303,10 @@
         }
 
         //Kör számláló
-        document.querySelector("#kovetkezoKor").addEventListener("click", kovetkezoKor)
+        document.querySelector("#kovetkezoKor").addEventListener("click", () => {
+            updateCounter("#korErtek", 1);
+            kovetkezoKor();
+        })
 
         document.querySelector("#korMinusz").addEventListener("click", () => {
             updateCounter("#korErtek", -1, 1); //az első azt jelöli mennyivel csökkenjen a kattintásra, a második érték az jelöli mennyi legyen a minimum érték
