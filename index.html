@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HKK TEST</title>
+    <style>
+        #EP {
+            width: 100%;
+            background-color: green;
+            text-align: center;
+            font-size: 100px;
+            color: white;
+        }
+
+        #maxEP {
+            width: 100%;
+            background-color: green;
+            font-size: 100px;
+            text-align: center;
+            color: white;
+            border-top: 2px black solid;
+        }
+
+        #Vp {
+            width: 100%;
+            background-color: rgb(21, 101, 192);
+            text-align: center;
+            font-size: 100px;
+            color: white;
+            border-top: 2px black solid;
+        }
+
+        #maxVp {
+            width: 100%;
+            background-color: rgb(21, 101, 192);
+            text-align: center;
+            font-size: 100px;
+            color: white;
+            border-top: 2px black solid;
+        }
+
+        #csont {
+            width: 100%;
+            background-color: grey;
+            text-align: center;
+            font-size: 100px;
+            color: white;
+            border-top: 2px black solid;
+        }
+
+        #kor {
+            width: 100%;
+            background-color: black;
+            color: white;
+            text-align: center;
+            font-size: 100px;
+        }
+
+        #csontKep {
+            width: 100px;
+            margin-top: 20px;
+        }
+
+        .rendezoBal {
+            float: left;
+            margin: 12px 0px 0px 50px;
+            color: white;
+            font-size: 70px;
+        }
+
+        .rendezoJobb {
+            margin: 20px 50px 0 0;
+            font-size: 70px;
+            color: white;
+            float: right;
+        }
+
+        #epPlusz {
+            cursor: pointer;
+        }
+
+        #mEpPlusz {
+            cursor: pointer;
+        }
+
+        #epMinusz {
+            cursor: pointer;
+        }
+
+        #mEpMinusz {
+            cursor: pointer;
+        }
+
+        #vpPlusz {
+            cursor: pointer;
+        }
+
+        #mVpPlusz {
+            cursor: pointer;
+        }
+
+        #vpMinusz {
+            cursor: pointer;
+        }
+
+        #mVpMinusz {
+            cursor: pointer;
+        }
+
+        #csontPlusz {
+            cursor: pointer;
+        }
+
+        #csontMinusz {
+            cursor: pointer;
+        }
+
+        #korPlusz {
+            cursor: pointer;
+        }
+
+        #korMinusz {
+            cursor: pointer;
+        }
+
+        /* Container for checkbox and label */
+        .checkbox-containerIdezes {
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+        }
+
+        .checkbox-containerMulligan {
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+        }
+
+        /* Hide the default checkbox */
+        input[type="checkbox"] {
+            position: absolute;
+            opacity: 0;
+            cursor: pointer;
+        }
+
+        /* Custom checkbox appearance */
+        .custom-checkboxIdezes {
+            width: 50px;
+            height: 50px;
+            background-image: url('unchecked.png');
+            /* Default unchecked image */
+            background-size: cover;
+            display: inline-block;
+            border: 2px solid #ccc;
+            border-radius: 5px;
+
+        }
+
+        .custom-checkboxMulligan {
+            width: 50px;
+            height: 50px;
+            background-image: url('unchecked.png');
+            /* Default unchecked image */
+            background-size: cover;
+            display: inline-block;
+            border: 2px solid #ccc;
+            border-radius: 5px;
+
+        }
+
+        /* Image when the checkbox is checked */
+        input[type="checkbox"]:checked+.custom-checkboxIdezes {
+            background-image: url("idezes.png");
+            /* Image for the checked state */
+        }
+
+        input[type="checkbox"]:checked+.custom-checkboxMulligan {
+            background-image: url("mulligan.png");
+            /* Image for the checked state */
+        }
+
+        /* Label text next to the checkbox */
+        .checkbox-label {
+            margin-left: 10px;
+            font-size: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="kor">
+        <div class="rendezoBal" id="korMinusz">-</div>
+        <label for="kor">Kör:</label>
+        <span id="korErtek">1</span>
+        <div class="rendezoJobb" id="korPlusz">+</div>
+    </div>
+
+    <div id="EP">
+        <div class="rendezoBal" id="epMinusz">-</div>
+        <span id="epErtek">20</span>
+        <p class="rendezoJobb" id="epPlusz">+</p>
+    </div>
+
+    <div id="maxEP">
+        <div class="rendezoBal" id="mEpMinusz">-</div>
+        <label for="maxEP">max:</label>
+        <span id="maxEpErtek">20</span>
+        <div class="rendezoJobb" id="mEpPlusz">+</div>
+    </div>
+
+    <div id="Vp">
+        <div class="rendezoBal" id="vpMinusz">-</div>
+        <span id="vpErtek">20</span>
+        <div class="rendezoJobb" id="vpPlusz">+</div>
+    </div>
+
+    <div id="maxVp">
+        <div class="rendezoBal" id="mVpMinusz">-</div>
+        <label for="maxVp">max:</label>
+        <span id="maxVpErtek">20</span>
+        <div class="rendezoJobb" id="mVpPlusz">+</div>
+    </div>
+
+    <div id="csont">
+        <div class="rendezoBal" id="csontMinusz">-</div>
+        <span id="szKErtek">0 </span>
+        <img src="csont2.png" alt="Szörnykomponens" title="Szörnykomponens" id="csontKep">
+        <div class="rendezoJobb" id="csontPlusz">+</div>
+    </div>
+
+    <div id="idezes">
+        <label class="checkbox-containerIdezes">
+
+            <input type="checkbox" />
+            <span class="custom-checkboxIdezes"></span>
+            <span class="checkbox-label">Idézés</span>
+        </label>
+    </div>
+
+    <div>
+        <label class="checkbox-containerMulligan">
+
+            <input type="checkbox" />
+            <span class="custom-checkboxMulligan"></span>
+            <span class="checkbox-label">Mulligan</span>
+        </label>
+    </div>
+
+    <script>
+        // Helper function to update counter values with constraints
+        function updateCounter(selector, delta, min = 0, max = Infinity) {
+            const element = document.querySelector(selector);
+            const currentValue = Number(element.innerHTML);
+            const newValue = Math.min(Math.max(currentValue + delta, min), max);
+            element.innerHTML = newValue;
+            return newValue;
+        }
+
+        //Kör számláló
+        document.querySelector("#korPlusz").addEventListener("click", () => {
+            updateCounter("#korErtek", 1);
+        })
+
+        document.querySelector("#korMinusz").addEventListener("click", () => {
+            updateCounter("#korErtek", -1, 1); //az első azt jelöli mennyivel csökkenjen a kattintásra, a második érték az jelöli mennyi legyen a minimum érték
+        })
+
+        // Élet számláló
+        document.querySelector("#epPlusz").addEventListener("click", () => {
+            const maxEpValue = Number(document.querySelector("#maxEpErtek").innerHTML);
+            updateCounter("#epErtek", 1, 0, maxEpValue);
+        });
+
+        document.querySelector("#epMinusz").addEventListener("click", () => {
+            updateCounter("#epErtek", -1);
+        });
+
+        // Maximum élet számláló
+        document.querySelector("#mEpPlusz").addEventListener("click", () => {
+            updateCounter("#maxEpErtek", 1);
+        });
+
+        document.querySelector("#mEpMinusz").addEventListener("click", () => {
+            const newMaxEp = updateCounter("#maxEpErtek", -1, 0);
+            const epValue = Number(document.querySelector("#epErtek").innerHTML);
+            if (epValue > newMaxEp) {
+                document.querySelector("#epErtek").innerHTML = newMaxEp;
+            }
+        });
+
+        // Varázspont számláló
+        document.querySelector("#vpPlusz").addEventListener("click", () => {
+            const maxVpValue = Number(document.querySelector("#maxVpErtek").innerHTML);
+            updateCounter("#vpErtek", 1, 0, maxVpValue);
+        });
+
+        document.querySelector("#vpMinusz").addEventListener("click", () => {
+            updateCounter("#vpErtek", -1);
+        });
+
+        // Maximum varázspont számláló
+        document.querySelector("#mVpPlusz").addEventListener("click", () => {
+            updateCounter("#maxVpErtek", 1);
+        });
+
+        document.querySelector("#mVpMinusz").addEventListener("click", () => {
+            const newMaxVp = updateCounter("#maxVpErtek", -1, 0);
+            const vpValue = Number(document.querySelector("#vpErtek").innerHTML);
+            if (vpValue > newMaxVp) {
+                document.querySelector("#vpErtek").innerHTML = newMaxVp;
+            }
+        });
+
+        // Szörnykomponens számláló
+        document.querySelector("#csontPlusz").addEventListener("click", () => {
+            updateCounter("#szKErtek", 1);
+        });
+
+        document.querySelector("#csontMinusz").addEventListener("click", () => {
+            updateCounter("#szKErtek", -1);
+        });
+    </script>
+</body>
+
+</html>
