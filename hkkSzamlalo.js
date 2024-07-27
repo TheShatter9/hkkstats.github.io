@@ -49,7 +49,7 @@ document.querySelector("#kovetkezoKor").addEventListener("click", () => {
 })
 
 document.querySelector("#korMinusz").addEventListener("click", () => {
-    updateCounter("#korErtek", -1, 1); //az első azt jelöli mennyivel csökkenjen a kattintásra, a második érték az jelöli mennyi legyen a minimum érték
+    updateCounter("#korErtek", -1, 0); //az első azt jelöli mennyivel csökkenjen a kattintásra, a második érték az jelöli mennyi legyen a minimum érték
 })
 
 // Élet számláló
