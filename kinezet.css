@@ -208,7 +208,7 @@ input[type="checkbox"]:checked+.custom-checkboxMulligan {
 .igazito {
     /*középre teszi*/
     align-items: center;
-    margin: -50px 0px 0px 200px;
-    display: flex;
+    margin: -50px 0px 0px 150px;
+    display: inline-flex;
     cursor: pointer;
 }
