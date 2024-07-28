@@ -9,6 +9,7 @@
 .kockaPorog:hover {
     animation-name: porog;
     animation-duration: 2s;
+    animation-iteration-count: infinite;
 }
 
 
