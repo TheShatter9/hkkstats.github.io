@@ -1,0 +1,213 @@
+@keyframes porog {
+
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.kockaPorog:hover {
+    animation-name: porog;
+    animation-duration: 2s;
+}
+
+
+
+#EP {
+    width: 100%;
+    background-color: green;
+    text-align: center;
+    font-size: 65px;
+    color: white;
+}
+
+#maxEP {
+    width: 100%;
+    background-color: green;
+    font-size: 65px;
+    text-align: center;
+    color: white;
+    border-top: 2px black solid;
+}
+
+#Vp {
+    width: 100%;
+    background-color: rgb(21, 101, 192);
+    text-align: center;
+    font-size: 65px;
+    color: white;
+    border-top: 2px black solid;
+}
+
+#maxVp {
+    width: 100%;
+    background-color: rgb(21, 101, 192);
+    text-align: center;
+    font-size: 65px;
+    color: white;
+    border-top: 2px black solid;
+}
+
+#csont {
+    width: 100%;
+    background-color: grey;
+    text-align: center;
+    font-size: 65px;
+    color: white;
+    border-top: 2px black solid;
+}
+
+#kor {
+    width: 100%;
+    background-color: black;
+    color: white;
+    text-align: center;
+    font-size: 65px;
+}
+
+#csontKep {
+    width: 60px;
+    margin-top: -10px;
+    margin-right: -80px;
+}
+
+.rendezoBal {
+    float: left;
+    margin: 28px 0px 0px 30px;
+    color: white;
+    font-size: 30px;
+}
+
+.rendezoJobb {
+    margin: 28px 30px 0 0;
+    font-size: 30px;
+    color: white;
+    float: right;
+}
+
+#epPlusz {
+    cursor: pointer;
+}
+
+#mEpPlusz {
+    cursor: pointer;
+}
+
+#epMinusz {
+    cursor: pointer;
+}
+
+#mEpMinusz {
+    cursor: pointer;
+}
+
+#vpPlusz {
+    cursor: pointer;
+}
+
+#mVpPlusz {
+    cursor: pointer;
+}
+
+#vpMinusz {
+    cursor: pointer;
+}
+
+#mVpMinusz {
+    cursor: pointer;
+}
+
+#csontPlusz {
+    cursor: pointer;
+}
+
+#csontMinusz {
+    cursor: pointer;
+}
+
+#kovetkezoKor {
+    cursor: pointer;
+}
+
+#korMinusz {
+    cursor: pointer;
+}
+
+/* Container for checkbox and label */
+.checkbox-containerIdezes {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.checkbox-containerMulligan {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+/* Hide the default checkbox */
+input[type="checkbox"] {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+/* Custom checkbox appearance */
+.custom-checkboxIdezes {
+    width: 50px;
+    height: 50px;
+    background-image: url('unchecked.png');
+    /* Default unchecked image */
+    background-size: cover;
+    display: inline-block;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+
+}
+
+.custom-checkboxMulligan {
+    width: 50px;
+    height: 50px;
+    background-image: url('unchecked.png');
+    /* Default unchecked image */
+    background-size: cover;
+    display: inline-block;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+
+}
+
+/* Image when the checkbox is checked */
+input[type="checkbox"]:checked+.custom-checkboxIdezes {
+    background-image: url("idezes.png");
+    /* Image for the checked state */
+}
+
+input[type="checkbox"]:checked+.custom-checkboxMulligan {
+    background-image: url("mulligan.png");
+    /* Image for the checked state */
+}
+
+/* Label text next to the checkbox */
+.checkbox-label {
+    margin-left: 10px;
+    font-size: 20px;
+}
+
+#idezes {
+    width: 120px;
+}
+
+#jobbra {
+    float: right;
+    margin-top: -50px;
+}
+
+.igazito {
+    /*középre teszi*/
+    margin-left: 50%;
+    margin-top: -80px;
+    display: inline-block;
+
+}

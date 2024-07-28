@@ -112,4 +112,10 @@ document.getElementById("kockaEldobasa").addEventListener("click", function () {
     const randomSzam = Math.floor(Math.random() * 6) + 1;
     const kockaKep = document.getElementById("kockakep");
     kockaKep.src = `${randomSzam}.png`;
+
+    setTimeout(() => {
+        kockaKep.src = `${randomSzam}.png`
+    }, 300);
+    kockaKep.classList.remove("kockaPorog");
+    kockaKep.classList.add("kockaPorog");
 })
