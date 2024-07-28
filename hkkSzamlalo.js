@@ -106,3 +106,10 @@ document.querySelector("#csontPlusz").addEventListener("click", () => {
 document.querySelector("#csontMinusz").addEventListener("click", () => {
     updateCounter("#szKErtek", -1);
 });
+
+//Kocka megjelenítése
+document.getElementById("kockaEldobasa").addEventListener("click", function () {
+    const randomSzam = Math.floor(Math.random() * 6) + 1;
+    const kockaKep = document.getElementById("kockakep");
+    kockaKep.src = `${randomSzam}.png`;
+})
