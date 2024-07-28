@@ -6,10 +6,10 @@
     }
 }
 
-.kockaPorog:hover {
+.kockaPorog {
     animation-name: porog;
     animation-duration: 2s;
-    animation-iteration-count: infinite;
+
 }
 
 
@@ -210,5 +210,5 @@ input[type="checkbox"]:checked+.custom-checkboxMulligan {
     margin-left: 50%;
     margin-top: -80px;
     display: inline-block;
-
+    cursor: pointer;
 }
