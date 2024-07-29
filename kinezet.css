@@ -272,3 +272,9 @@ button:hover {
     text-decoration: none;
     cursor: pointer;
 }
+
+#reset {
+    position: relative;
+    top: 20px;
+    left: 270px;
+}
