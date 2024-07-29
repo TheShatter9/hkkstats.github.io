@@ -12,70 +12,67 @@
 </head>
 
 <body>
-    <!--
-    <div id="kor">
-        <button id="kovetkezoKor" class="btn btn-dark btn-lg">Kör:</button> <span id="aktualisKor">0</span>
-    </div>
--->
+    <div id="main-container">
+        <div id="kor">
+            <div class="rendezoBal" id="korMinusz"><i class="bi bi-patch-minus-fill"></i></div>
+            <label for="kor">Kör:</label>
+            <span id="korErtek">0</span>
+            <div class="rendezoJobb" id="kovetkezoKor"><i class="bi bi-patch-plus-fill"></i></div>
+        </div>
+
+        <div id="EP">
+            <div class="rendezoBal" id="epMinusz"><i class="bi bi-patch-minus-fill"></i></div>
+            <span id="epErtek">20</span>
+            <p class="rendezoJobb" id="epPlusz"><i class="bi bi-patch-plus-fill"></i></p>
+        </div>
+
+        <div id="maxEP">
+            <div class="rendezoBal" id="mEpMinusz"><i class="bi bi-patch-minus-fill"></i></div>
+            <label for="maxEP">max:</label>
+            <span id="maxEpErtek">20</span>
+            <div class="rendezoJobb" id="mEpPlusz"><i class="bi bi-patch-plus-fill"></i></div>
+        </div>
+
+        <div id="Vp">
+            <div class="rendezoBal" id="vpMinusz"><i class="bi bi-patch-minus-fill"></i></div>
+            <span id="vpErtek">0</span>
+            <div class="rendezoJobb" id="vpPlusz"><i class="bi bi-patch-plus-fill"></i></div>
+        </div>
+
+        <div id="maxVp">
+            <div class="rendezoBal" id="mVpMinusz"><i class="bi bi-patch-minus-fill"></i></div>
+            <label for="maxVp">max:</label>
+            <span id="maxVpErtek">20</span>
+            <div class="rendezoJobb" id="mVpPlusz"><i class="bi bi-patch-plus-fill"></i></div>
+        </div>
+
+        <div id="csont">
+            <div class="rendezoBal" id="csontMinusz"><i class="bi bi-patch-minus-fill"></i></div>
+            <span id="szKErtek">0</span>
+            <img src="csont2.png" alt="Szörnykomponens" title="Szörnykomponens" id="csontKep">
+            <div class="rendezoJobb" id="csontPlusz"><i class="bi bi-patch-plus-fill"></i></div>
+        </div>
+
+        <div id="idezes">
+            <label class="checkbox-containerIdezes">
+
+                <input type="checkbox" />
+                <span class="custom-checkboxIdezes"></span>
+                <span class="checkbox-label">Idézés</span>
+            </label>
+
+        </div>
+
+        <div>
+            <label class="checkbox-containerMulligan" id="jobbra">
+
+                <input type="checkbox" />
+                <span class="custom-checkboxMulligan"></span>
+                <span class="checkbox-label">Mulligan</span>
+            </label>
+        </div>
 
 
-    <div id="kor">
-        <div class="rendezoBal" id="korMinusz"><i class="bi bi-patch-minus-fill"></i></div>
-        <label for="kor">Kör:</label>
-        <span id="korErtek">0</span>
-        <div class="rendezoJobb" id="kovetkezoKor"><i class="bi bi-patch-plus-fill"></i></div>
-    </div>
-
-    <div id="EP">
-        <div class="rendezoBal" id="epMinusz"><i class="bi bi-patch-minus-fill"></i></div>
-        <span id="epErtek">20</span>
-        <p class="rendezoJobb" id="epPlusz"><i class="bi bi-patch-plus-fill"></i></p>
-    </div>
-
-    <div id="maxEP">
-        <div class="rendezoBal" id="mEpMinusz"><i class="bi bi-patch-minus-fill"></i></div>
-        <label for="maxEP">max:</label>
-        <span id="maxEpErtek">20</span>
-        <div class="rendezoJobb" id="mEpPlusz"><i class="bi bi-patch-plus-fill"></i></div>
-    </div>
-
-    <div id="Vp">
-        <div class="rendezoBal" id="vpMinusz"><i class="bi bi-patch-minus-fill"></i></div>
-        <span id="vpErtek">0</span>
-        <div class="rendezoJobb" id="vpPlusz"><i class="bi bi-patch-plus-fill"></i></div>
-    </div>
-
-    <div id="maxVp">
-        <div class="rendezoBal" id="mVpMinusz"><i class="bi bi-patch-minus-fill"></i></div>
-        <label for="maxVp">max:</label>
-        <span id="maxVpErtek">20</span>
-        <div class="rendezoJobb" id="mVpPlusz"><i class="bi bi-patch-plus-fill"></i></div>
-    </div>
-
-    <div id="csont">
-        <div class="rendezoBal" id="csontMinusz"><i class="bi bi-patch-minus-fill"></i></div>
-        <span id="szKErtek">0 </span>
-        <img src="csont2.png" alt="Szörnykomponens" title="Szörnykomponens" id="csontKep">
-        <div class="rendezoJobb" id="csontPlusz"><i class="bi bi-patch-plus-fill"></i></div>
-    </div>
-
-    <div id="idezes">
-        <label class="checkbox-containerIdezes">
-
-            <input type="checkbox" />
-            <span class="custom-checkboxIdezes"></span>
-            <span class="checkbox-label">Idézés</span>
-        </label>
-
-    </div>
-
-    <div>
-        <label class="checkbox-containerMulligan" id="jobbra">
-
-            <input type="checkbox" />
-            <span class="custom-checkboxMulligan"></span>
-            <span class="checkbox-label">Mulligan</span>
-        </label>
     </div>
     <div class="container">
         <div id="kockaMod" class="modal">
@@ -87,10 +84,9 @@
             </div>
         </div>
 
-
         <button type="button" class="btn btn-dark" id="kockaAblakMegnyitas">D6 kocka</button>
+        <button type="button" class="btn btn-danger" id="reset">Új meccs</button>
     </div>
-
     <script src="hkkSzamlalo.js"></script>
 </body>
 

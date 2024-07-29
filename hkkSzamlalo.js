@@ -128,6 +128,8 @@ const modal = document.getElementById("kockaMod");
 const kockaAblakNyitas = document.getElementById("kockaAblakMegnyitas");
 const kockaAblakZaras = document.getElementById("close");
 
+
+
 //Ablak megnyitása
 kockaAblakNyitas.addEventListener("click", function () {
     modal.style.display = "block";
@@ -141,5 +143,44 @@ kockaAblakZaras.addEventListener("click", function () {
 window.addEventListener("click", function (event) {
     if (event.target === modal) {
         modal.style.display = "none";
+    }
+});
+
+//Reset gomb
+document.getElementById("reset").addEventListener("click", function () {
+    const resetKorErtek = 0;
+    const resetEpErtek = 20;
+    const resetMEpErtek = 20;
+    const resetVpErtek = 0;
+    const resetMVpErtek = 20;
+    const resetSzKErtek = 0;
+    let resetKor = Number(document.querySelector("#korErtek").innerHTML);
+    if (resetKor = !0) {
+        document.querySelector("#korErtek").innerHTML = resetKorErtek;
+    }
+
+    let resetEp = Number(document.querySelector("#epErtek").innerHTML);
+    if (resetEp > 20 || resetEp < 20) {
+        document.querySelector("#epErtek").innerHTML = resetEpErtek;
+    }
+
+    let resetMEp = Number(document.querySelector("#maxEpErtek").innerHTML);
+    if (resetMEp > 20 || resetMEp < 20) {
+        document.querySelector("#maxEpErtek").innerHTML = resetMEpErtek;
+    }
+
+    let resetVp = Number(document.querySelector("#vpErtek").innerHTML);
+    if (resetVp = !0) {
+        document.querySelector("#vpErtek").innerHTML = resetVpErtek;
+    }
+
+    let resetMVp = Number(document.querySelector("#maxVpErtek").innerHTML);
+    if (resetMVp > 20 || resetMVp < 20) {
+        document.querySelector("#maxVpErtek").innerHTML = resetMVpErtek;
+    }
+
+    let resetSzK = Number(document.querySelector("#szKErtek").innerHTML);
+    if (resetSzK = !0) {
+        document.querySelector("#szKErtek").innerHTML = resetSzKErtek;
     }
 });
