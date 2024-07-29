@@ -121,4 +121,25 @@ document.getElementById("kockaEldobasa").addEventListener("click", function () {
 
     kockaKep.classList.add("kockaPorog");
 
-})
+});
+
+//Kocka ablak
+const modal = document.getElementById("kockaMod");
+const kockaAblakNyitas = document.getElementById("kockaAblakMegnyitas");
+const kockaAblakZaras = document.getElementById("close");
+
+//Ablak megnyitása
+kockaAblakNyitas.addEventListener("click", function () {
+    modal.style.display = "block";
+});
+
+//Ablak bezárása
+kockaAblakZaras.addEventListener("click", function () {
+    modal.style.display = "none";
+});
+
+window.addEventListener("click", function (event) {
+    if (event.target === modal) {
+        modal.style.display = "none";
+    }
+});
