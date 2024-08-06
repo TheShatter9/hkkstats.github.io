@@ -154,6 +154,10 @@ document.getElementById("reset").addEventListener("click", function () {
     const resetVpErtek = 0;
     const resetMVpErtek = 20;
     const resetSzKErtek = 0;
+    aktualisKor = 0;
+    vPNoveles = 0;
+
+
     let resetKor = Number(document.querySelector("#korErtek").innerHTML);
     if (resetKor = !0) {
         document.querySelector("#korErtek").innerHTML = resetKorErtek;
